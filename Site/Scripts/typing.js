@@ -16,13 +16,16 @@ function prepareSwitch (){
     $("#navbar").css({display: 'none'});
     $("#mainW").css({display: 'none'});
     $("#petsW").css({display: 'none'});
+    $("#projectsW").css({display: 'none'});
+    $("#galleryW").css({display: 'none'});
+    $("#mlidmW").css({display: 'none'});
     $("#contentTitle").css({display: 'none'});
-    $(".content").css({justifyContent: 'center'})
+    $(".content").css({"margin-top": "60px"})
 }
 window.onload =()=>{
     let startup = new Audio('../Images/win98.mp3')
     startup.play();
-    $("#aboutMeBtn").click(()=>{
+    function aboutMeSwitch () {
         prepareSwitch();
         $("#aboutW").css({display: 'flex'});
         $("#navbar").css({display: 'flex'});
@@ -34,12 +37,12 @@ window.onload =()=>{
                 opacity: 1
             }, 200);
         })
-    })
-    $("#petsBtn").click(()=>{
+    }
+    function petsSwitch (){
         prepareSwitch();
         $("#petsW").css({display: 'flex'});
         $("#navbar").css({display: 'flex'});
-        $(".aboutEl").each(function (i) {
+        $(".petsEl").each(function (i) {
             $(this).delay(500 * i).css({
                 display: 'flex',
                 opacity: 0
@@ -48,20 +51,59 @@ window.onload =()=>{
             }, 200);
         })
         $(".aboutItem").css({opacity: 1})
-        $(".content").css({justifyContent: 'flex-start'})
-    })
-    $(".aboutBackBtn").click(()=>{
+    }
+    function projectsSwitch (){
+        prepareSwitch();
+        $("#projectsW").css({display: 'flex'});
+        $("#navbar").css({display: 'flex'});
+        $(".projEl").each(function (i) {
+            $(this).delay(500 * i).css({
+                display: 'flex',
+                opacity: 0
+            }).animate({
+                opacity: 1
+            }, 200);
+        })
+        $(".aboutItem").css({opacity: 1})
+    }
+    function mlidmSwitch (){
+        prepareSwitch();
+        $("#mlidmW").css({display: 'flex'});
+        $("#navbar").css({display: 'flex'});
+        $(".mlidmEl").each(function (i) {
+            $(this).delay(500 * i).css({
+                display: 'flex',
+                opacity: 0
+            }).animate({
+                opacity: 1
+            }, 200);
+        })
+        $(".aboutItem").css({opacity: 1})
+    }
+    function gallerySwitch (){
+        prepareSwitch();
+        $("#galleryW").css({display: 'flex'});
+        $("#navbar").css({display: 'flex'});
+        $(".aboutItem").css({opacity: 1})
+    }
+    function mainSwitch (){
         prepareSwitch();
         $("#mainW").css({display: 'flex'});
         $("#contentTitle").css({display: 'block'});
         $("#introduction").css({animation: "none", opacity:1})
         $(".menuItem").css({animation: "none", opacity:1})
-    })
-    $("#mainWBtn").click(()=>{
-        prepareSwitch();
-        $("#mainW").css({display: 'flex'});
-        $("#contentTitle").css({display: 'block'});
-        $("#introduction").css({animation: "none", opacity:1})
-        $(".menuItem").css({animation: "none", opacity:1})
-    })
+        $(".content").css({"margin-top": "0px"})
+    }
+    $("#aboutMeBtn").click(aboutMeSwitch);
+    $("#navAboutMeBtn").click(aboutMeSwitch);
+    $("#petsBtn").click(petsSwitch);
+    $("#navPetsBtn").click(petsSwitch);
+    $(".aboutBackBtn").click(mainSwitch);
+    $("#mainWBtn").click(mainSwitch);
+    $("#projectsBtn").click(projectsSwitch);
+    $("#navProjectsBtn").click(projectsSwitch);
+    $("#mlidmBtn").click(mlidmSwitch);
+    $("#navMlidmBtn").click(mlidmSwitch);
+    $("#galleryBtn").click(gallerySwitch);
+    $("#navGalleryBtn").click(gallerySwitch);
 }

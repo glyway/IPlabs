@@ -5,16 +5,19 @@
         </div>
         <div class="navbar">
             <div class="itemHeader">
-                <a class="linkItemHeader"><p>Питомцы</p></a>
+                <a id="navAboutMeBtn" class="linkItemHeader"><p>О себе</p></a>
             </div>
             <div class="itemHeader">
-                <a class="linkItemHeader"><p>Проекты</p></a>
+                <a id="navPetsBtn" class="linkItemHeader"><p>Питомцы</p></a>
             </div>
             <div class="itemHeader">
-                <a class="linkItemHeader"><p>Галерея</p></a>
+                <a id="navProjectsBtn" class="linkItemHeader"><p>Проекты</p></a>
             </div>
             <div class="itemHeader">
-                <a class="linkItemHeader"><p>МЛИДМ</p></a>
+                <a id="navGalleryBtn" class="linkItemHeader"><p>Галерея</p></a>
+            </div>
+            <div class="itemHeader">
+                <a id="navMlidmBtn" class="linkItemHeader"><p>МЛИДМ</p></a>
             </div>
         </div>
         <div class="loginItemHeader">
