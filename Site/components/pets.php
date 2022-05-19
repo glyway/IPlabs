@@ -7,7 +7,7 @@
         </div>
         <div class="aboutEl petsEl">
             <div class="aboutPetImage">
-                <img src="Images/meButInMyDreams.png" width="150px">
+                <img src="Images/Pushok.png" width="150px">
             </div>
             <div class="aboutTextWrapper">
                 <div class="aboutTitle"><h2>Пушок</h2></div>
@@ -18,7 +18,7 @@
         </div>
         <div class="aboutEl petsEl">
             <div class="aboutPetImage">
-                <img src="Images/meButInMyDreams.png" width="150px">
+                <img src="Images/grisha.png" width="150px">
             </div>
             <div class="aboutTextWrapper">
                 <div class="aboutTitle"><h2>Гриша</h2></div>
@@ -29,7 +29,7 @@
         </div>
         <div class="aboutEl petsEl">
             <div class="aboutPetImage">
-                <img src="Images/meButInMyDreams.png" width="150px">
+                <img src="Images/Esha.png" width="150px">
             </div>
             <div class="aboutTextWrapper">
                 <div class="aboutTitle"><h2>Ёша</h2></div>
@@ -40,7 +40,7 @@
         </div>
         <div class="aboutEl petsEl">
             <div class="aboutPetImage">
-                <img src="Images/meButInMyDreams.png" width="150px">
+                <img src="Images/Frosya.png" width="150px">
             </div>
             <div class="aboutTextWrapper">
                 <div class="aboutTitle"><h2>Фрося</h2></div>

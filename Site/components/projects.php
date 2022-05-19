@@ -7,7 +7,7 @@
         </div>
         <div class="aboutEl projEl">
             <div class="aboutPetImage">
-                <img src="Images/meButInMyDreams.png" width="150px">
+                <img src="Images/hwhub.png" width="150px">
             </div>
             <div class="aboutTextWrapper">
                 <div class="aboutTitle"><h2>HWHub</h2></div>
@@ -18,7 +18,7 @@
         </div>
         <div class="aboutEl projEl">
             <div class="aboutPetImage">
-                <img src="Images/meButInMyDreams.png" width="150px">
+                <img src="Images/vkreopt.png" width="150px">
             </div>
             <div class="aboutTextWrapper">
                 <div class="aboutTitle"><h2>VKReOpt</h2></div>
@@ -29,7 +29,7 @@
         </div>
         <div class="aboutEl projEl">
             <div class="aboutPetImage">
-                <img src="Images/meButInMyDreams.png" width="150px">
+                <img src="Images/Nenovo.png" width="150px">
             </div>
             <div class="aboutTextWrapper">
                 <div class="aboutTitle"><h2>NeNovo</h2></div>
@@ -40,7 +40,7 @@
         </div>
         <div class="aboutEl projEl">
             <div class="aboutPetImage">
-                <img src="Images/meButInMyDreams.png" width="150px">
+                <img src="Images/glybot.png" width="150px">
             </div>
             <div class="aboutTextWrapper">
                 <div class="aboutTitle"><h2>GlyBot</h2></div>
