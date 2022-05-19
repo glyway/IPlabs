@@ -22,6 +22,8 @@ function prepareSwitch (){
     $("#contentTitle").css({display: 'none'});
     $(".content").css({"margin-top": "60px"})
 }
+let galleryID = 0;
+let galleryCoords = 0;
 window.onload =()=>{
     let startup = new Audio('../Images/win98.mp3')
     startup.play();
@@ -84,8 +86,16 @@ window.onload =()=>{
         prepareSwitch();
         $("#galleryW").css({display: 'flex'});
         $("#navbar").css({display: 'flex'});
-        $(".aboutItem").css({opacity: 1})
+        $(".aboutItem").css({opacity: 1});
+        $(".galleryImg").css({width:$("#galleryContent").width()+"px"});
+        $(".galleryBtn").css({height:$("#galleryContent").height()+"px"});
     }
+    $( window ).resize(function() {
+        $(".galleryImg").css({width:$("#galleryContent").width()+"px"});
+        $(".galleryBtn").css({height:$("#galleryContent").height()+"px"});
+        galleryCoords = $(".galleryImg").width()*galleryID*-1;
+        $("#galleryImages").css({"margin-left":galleryCoords+"px"})
+    });
     function mainSwitch (){
         prepareSwitch();
         $("#mainW").css({display: 'flex'});
@@ -93,6 +103,34 @@ window.onload =()=>{
         $("#introduction").css({animation: "none", opacity:1})
         $(".menuItem").css({animation: "none", opacity:1})
         $(".content").css({"margin-top": "0px"})
+    }
+    function galleryRight () {
+        galleryID++;
+        let lastN = galleryCoords;
+        let width = $(".galleryImg").width()
+        galleryCoords-= width;
+        let max = $(".galleryImg").length*width*-1+width;
+        if (galleryCoords < max-10) {
+            galleryCoords = 0;
+            galleryID = 0;
+        }
+        $("#galleryImages").css({"margin-left":lastN+"px"}).animate({
+            "margin-left":galleryCoords+"px"
+        }, 1000);
+    }
+    function galleryLeft () {
+        galleryID--;
+        let lastN = galleryCoords;
+        let width = $(".galleryImg").width()
+        galleryCoords+=width;
+        let max = $(".galleryImg").length*width*-1+width;
+        if (galleryCoords > 10) {
+            galleryCoords = max;
+            galleryID = $(".galleryImg").length-1;
+        }
+        $("#galleryImages").css({"margin-left":lastN+"px"}).animate({
+            "margin-left":galleryCoords+"px"
+        }, 1000);
     }
     $("#aboutMeBtn").click(aboutMeSwitch);
     $("#navAboutMeBtn").click(aboutMeSwitch);
@@ -106,4 +144,6 @@ window.onload =()=>{
     $("#navMlidmBtn").click(mlidmSwitch);
     $("#galleryBtn").click(gallerySwitch);
     $("#navGalleryBtn").click(gallerySwitch);
+    $("#galleryRight").click(galleryRight)
+    $("#galleryLeft").click(galleryLeft)
 }

@@ -1,3 +1,5 @@
+
+
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -70,6 +72,7 @@ body {
     justify-content: center;
     transform: rotateX(90deg);
     animation: 2s titleAppearing forwards;
+    text-align: center;
 }
 @keyframes titleAppearing {
     to {
@@ -85,7 +88,8 @@ body {
     text-align: center;
     border: 1px solid rgb(40, 17, 69);
     border-radius: 10px;
-    width: 540px;
+    max-width: 540px;
+    width: 100%;
     padding: 0 10px 0 10px;
     height: 100%;
     opacity: 0;
@@ -122,6 +126,7 @@ body {
     cursor: pointer;
     opacity: 0;
     animation: 0.2s appearing calc(2.2s + var(--i)*0.5s) forwards;
+    position: relative;
 }
 
 #typing1 {
@@ -244,6 +249,9 @@ body {
     text-align: center;
     margin-top: 10px;
 }
+.noImage{
+    width: 600px;
+}
 .aboutTitle{
     text-align: center;
     align-items: center;
@@ -261,4 +269,86 @@ body {
     top: 0;
     bottom: 0;
     z-index: -1;
+}
+#galleryContent {
+    width: 500px;
+    margin-top: 10px;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+    display: flex;
+    margin-bottom: 10px;
+}
+#galleryImages{
+    flex-direction: row;
+    display: flex;
+    float: left;
+
+}
+#galleryImages img {
+    width: 500px;
+}
+.galleryBtn {
+    width: 100px;
+    font-size: 50px;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.galleryBtn:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+
+@media (max-width: 1000px) {
+    .contentMenu {
+        flex-direction: column;
+    }
+    .menuChoices {
+        width: 100%;
+    }
+}
+@media (max-width: 700px) {
+    .headerWrapper{
+        display: none!important;
+    }
+    .content {
+        margin-top: 20px!important;
+    }
+    .aboutWrapper{
+        width: 90vw;
+        margin-top: 0;
+        flex-direction: column-reverse;
+    }
+    .aboutEl {
+        flex-direction: column;
+    }
+    .contentTitle {
+        display: none!important;
+    }
+    .galleryEl {
+        flex-direction: row;
+    }
+    #galleryContent {
+        width: available;
+    }
+    #galleryImages img {
+        width: available;
+    }
+}
+@media (max-width: 570px) {
+    .introduction {
+        width: 90vw;
+    }
+    .menuInformation {
+        flex-direction: column;
+        transform: none;
+        margin-top: 10px;
+    }
+    .aboutTextWrapper {
+        width: 90%;
+    }
+
 }

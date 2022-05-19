@@ -6,12 +6,22 @@
             <i class="fa-solid fa-expand"></i>
             <i class="fa-solid fa-minus"></i>
         </div>
+        <h2 style="text-align: center; margin-bottom: 5px;">Галерея</h2>
         <div class="aboutEl galleryEl">
-            <div class="aboutTextWrapper" style="width: 600px">
-                <div class="aboutTitle"><h2>Галерея</h2></div>
-                <div class="aboutText">
-                    <p class="aboutItem">Здесь скоро будет галерея</p>
+            <div id="galleryLeft" class="galleryBtn">
+                <i class="fa-solid fa-angle-left"></i>
+            </div>
+            <div id="galleryContent">
+                <div id="galleryImages">
+                    <img class="galleryImg" src="Images/IMG1.jpg">
+                    <img class="galleryImg" src="Images/IMG2.jpg">
+                    <img class="galleryImg" src="Images/IMG3.jpg">
+                    <img class="galleryImg" src="Images/IMG4.jpg">
+                    <img class="galleryImg" src="Images/IMG5.jpg">
                 </div>
+            </div>
+            <div id="galleryRight" class="galleryBtn">
+                <i class="fa-solid fa-angle-right"></i>
             </div>
         </div>
     </div>
